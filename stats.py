@@ -18,3 +18,16 @@ def get_num_char(file_path):
             dict[char] = 0
         dict[char] += 1
     return dict
+
+def sort_on(item):
+    return item["num"]
+
+def sorted_list_char(file_path):
+    dict = get_num_char(file_path)
+    list = []
+    for entry in dict:
+        if entry.isalpha():
+            list_dict = {"char": entry, "num": dict[entry]}
+            list.append(list_dict)
+    list.sort(key = sort_on, reverse = True)
+    return list
