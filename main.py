@@ -7,7 +7,7 @@ from stats import sorted_list_char
 def main():
     import sys
     if len(sys.argv) != 2:
-        print("Usage: python 3 main.py <path_to_book>")
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1) 
     func, path = sys.argv
     print(f"= Bookbot = \nAnalyzing book found at {path}")
